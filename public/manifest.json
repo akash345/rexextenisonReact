@@ -14,7 +14,7 @@
   },
   "content_security_policy": "script-src 'self' 'sha256-ELkDE2InNI702G86lymxXYBdrcJq5bMn8+PhTgN6cks='; object-src 'self'",
   "permissions": [
-    "activeTab"
+    "tabs"
   ],
   "background": {
     "scripts": ["app/background.js"]
