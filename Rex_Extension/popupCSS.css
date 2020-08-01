@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Quicksand';
+    src: url("~get-caller-file");
+    font-weight:bold;
+}
+
 .center {
     display: block;
     margin-left: auto;
@@ -9,13 +15,42 @@
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-    color: #131D47;
+    background-color: #9AECED;
+    font-family: rexFont;
+    font-size: medium;
+    color: #282c34;
+
 }
 
 .padding    {
     margin-top: 50px;
 }
+.rex {
+    background-color: #131D47;
+    font-family: rexFont;
+    font-weight: bolder;
+    color: #F1F1F1
+}
 
-.whiteText  {
+.collapsible {
+    background-color: #9AECED;
+    color: #282c34;
+    cursor: pointer;
+    padding: 4px;
+    margin-top: 10px;
+    width: 30%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+.active, .collapsible:hover {
+    background-color: #ccc;
+}
 
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    color: #f1f1f1;
 }
