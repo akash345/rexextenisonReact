@@ -1,4 +1,6 @@
 /*global chrome*/
+console.log("We are receiving");
+alert("hello");
 function getURL() {
 console.log('Where do you want to send this url:');
     chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs =>  {
