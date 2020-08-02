@@ -24,18 +24,14 @@
 
 .button2 {
     display: block;
-    position: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 30px auto;
     padding: 5px;
     background-color: #9AECED;
     font-family: rexFont;
     font-size: larger;
     color: #282c34;
-    top: 50%;
-    bottom: 50%;
-
 }
+
 
 .padding    {
     margin-top: 50px;

@@ -1,14 +1,26 @@
-var coll = document.getElementsByClassName("collapsible");
-var i;
 
-for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-            content.style.display = "none";
-        } else {
-            content.style.display = "block";
-        }
-    });
-}
+document.querySelector("#collapsebutton").addEventListener("click", function(e){
+    const display = document.querySelector("#collapsecontent").style.display
+    if (display==="none"){
+        document.querySelector("#collapsecontent").style.display="block"
+    }else{
+        document.querySelector("#collapsecontent").style.display="none"
+    }
+})
+
+
+
+//API function
+function callAPI(method, url, data){
+    return new Promise (function(resolve, reject){
+            let xhr = new XMLHttpRequest();     
+            xhr.open(method, url, true);
+            xhr.setRequestHeader("Content-Type", "application/json")
+            xhr.send(data);    
+            xhr.onreadystatechange = function(){
+                if (this.readyState === XMLHttpRequest.DONE ){
+                    return resolve(xhr.response)
+                }
+            }
+    })
+  }
