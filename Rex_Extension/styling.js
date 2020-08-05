@@ -24,3 +24,16 @@ function callAPI(method, url, data){
             }
     })
   }
+
+let butts = document.getElementsByClassName("button");
+
+for (i = 0; i < butts.length; i++) {
+    butts[i].addEventListener("click", fun);
+}
+
+function fun() {
+    let text = document.createElement("div");
+    text.className = "ui small label";
+    text.innerHTML = "Sent!";
+    this.parentNode.replaceChild(text, this);  
+}
